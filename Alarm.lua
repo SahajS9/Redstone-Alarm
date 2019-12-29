@@ -4,13 +4,12 @@ local signal
 alarm.setAlarm("klaxon1") 
 alarm.setRange(15)
 
-signal = redstone.getInput(sides.bottom)
-if signal > 0 
-then
-  alarm.activate()
-else
-  alarm.deactivate()
-end
---os.sleep(10)
-
---alarm.deactivate()
+repeat
+  signal = redstone.getInput(sides.bottom)
+  if signal > 0 
+  then
+    alarm.activate()
+  else
+    alarm.deactivate()
+  end
+until(SIGINT)
