@@ -1,12 +1,12 @@
 alarm = require("component").os_alarm
 redstone = require("component").redstone
-
+local signal
 alarm.setAlarm("klaxon1") 
 alarm.setRange(15)
 
-redstone.getInput(sides.bottom)
---if
---alarm.activate()
+signal = redstone.getInput(sides.bottom)
+if signal > 0 then
+  alarm.activate()
 
 --os.sleep(10)
 
