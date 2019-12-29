@@ -9,7 +9,9 @@ repeat
   if signal > 0 
   then
     alarm.activate()
+    print("Alarm active.")
   else
     alarm.deactivate()
+    print("No signal.")
   end
 until(SIGINT)
