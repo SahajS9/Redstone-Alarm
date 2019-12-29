@@ -4,7 +4,7 @@ redstone = require("component").redstone
 alarm.setAlarm("klaxon1") 
 alarm.setRange(15)
 
-print(redstone.getInput(sides.bottom))
+redstone.getInput(sides.bottom)
 --if
 --alarm.activate()
 
