@@ -1,10 +1,11 @@
 alarm = require("component").os_alarm
 redstone = require("component").redstone
+require sides
 local signal
 alarm.setAlarm("klaxon1") 
 alarm.setRange(15)
 
-repeat
+while true do
   signal = redstone.getInput(sides.bottom)
   if signal > 0 
   then
@@ -14,4 +15,4 @@ repeat
     alarm.deactivate()
     print("No signal.")
   end
-until(SIGINT)
+end
