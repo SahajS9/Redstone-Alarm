@@ -1,9 +1,7 @@
 alarm = require("component").os_alarm
 
-alarm.setAlarm("klaxon2") -- Allows you to change the alarm played, 
-
+alarm.setAlarm("klaxon1") 
 alarm.setRange(15) 
-
 alarm.activate()
 
 wait(10)
