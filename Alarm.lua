@@ -1,6 +1,7 @@
-alarm = require("component").os_alarm
-redstone = require("component").redstone
-sides =require("component").redstone
+component = require("component")
+alarm = component.os_alarm
+redstone = component.redstone
+sides = require("sides")
 local signal
 alarm.setAlarm("klaxon1") 
 alarm.setRange(15)
