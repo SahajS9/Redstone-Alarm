@@ -4,11 +4,10 @@ redstone = component.redstone
 sides = require("sides")
 local signal
 alarm.setAlarm("klaxon1") 
-alarm.setRange(3)
+alarm.setRange(0)
 
 while true do
   signal = redstone.getInput(sides.back)
-  redstone.getInput()
   if signal > 0 
   then
     alarm.activate()
