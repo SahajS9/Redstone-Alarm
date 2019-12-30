@@ -8,12 +8,13 @@ alarm.setRange(15)
 
 while true do
   signal = redstone.getInput(sides.bottom)
+  redstone.getInput()
   if signal > 0 
   then
     alarm.activate()
-    print("Alarm active.")
+  --print("Alarm active.")
   else
     alarm.deactivate()
-    print("No signal.")
+  --print("No signal.")
   end
 end
